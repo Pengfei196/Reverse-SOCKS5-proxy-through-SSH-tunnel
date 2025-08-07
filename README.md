@@ -30,7 +30,7 @@ pysoxy.py在客户端启动了一个轻量的socks5服务，运行前先配置`L
 6. 服务器（Linux）使用Internet
 - apt服务需要借助proxychains软件实现socks5代理：`sudo proxychains apt install <package-name>`  
 使用proxychains软件需要先修改配置文件：① bash执行 `sudo nano /etc/proxychains.conf`， ② 添加一行 `socks5  127.0.0.1 R_Port2`  
-- pip服务需要加上socks5代理命令：`pip install --proxy socks5h://127.0.0.1:R_Port2 numpy`  
+- pip服务需要加上socks5代理命令：`pip install --proxy socks5h://127.0.0.1:R_Port2 <package-name>`  
   
 ### Test example
 `sudo proxychains apt install <package-name>`  
