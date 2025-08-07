@@ -63,9 +63,3 @@ if __name__ == '__main__':
     # tunnel_host & tunnel_port: use to establish tunnel connection
     socks5_server = PseudoSocks5Server(local_port=9000, tunnel_host='0.0.0.0', tunnel_port=8889)
     socks5_server.start()
-
-
-# sudo proxychains apt download <package-name>
-# pip install --proxy socks5h://127.0.0.1:9000 numpy
-# curl -v  --proxy socks5h://127.0.0.1:9000 https://www.baidu.com
-# curl -v  --proxy socks5h://127.0.0.1:9000 http://www.google.com
