@@ -18,11 +18,11 @@
   
 3. 服务器运行[Tunnel_server.py](./Tunnel_server.py)  
 运行前先配置脚本中的`local_port=R_Port2, tunnel_host='0.0.0.0', tunnel_port=R_Port1`三个参数
-其中：`0.0.0.0`表示全局网络，不需要修改；`R_Port2`为服务器端用来监听应用请求的伪socks5端口，需要与“5.”中的`R_Port2`相同，且不能与服务器已有端口冲突；`R_Port1`为服务器用来建立TCP隧道的监听端口，
+其中：`0.0.0.0`表示全局网络，不需要修改；`R_Port2`为服务器端用来监听应用请求的伪socks5端口，需要与“5.”中的`R_Port2`相同，且不能与服务器已有端口冲突  
   
 4. 客户端运行[pysoxy.py](./pysoxy.py)  
 pysoxy.py在客户端启动了一个轻量的socks5服务，运行前先配置`LOCAL_PORT = L_Port2`参数
-其中：`L_Port2`为socks5服务在客户端用来监听请求的端口，
+其中：`L_Port2`为socks5服务在客户端用来监听请求的端口，需要与“5.”中的`L_Port2`相同，且不能与本地已有端口冲突
   
 5. 客户端运行[Tunnel_client.py](./Tunnel_client.py)  
 运行前先配置`    tunnel_host = '127.0.0.1', tunnel_port = L_Port1, socks5_port = L_Port2`三个参数  
