@@ -25,7 +25,7 @@ pysoxy.py在客户端启动了一个轻量的socks5服务，运行前先配置`L
 其中：`L_Port2`为socks5服务在客户端用来监听请求的端口，需要与“5.”中的`L_Port2`相同，且不能与本地已有端口冲突
   
 5. 客户端运行[Tunnel_client.py](./Tunnel_client.py)  
-运行前先配置`    tunnel_host = '127.0.0.1', tunnel_port = L_Port1, socks5_port = L_Port2`三个参数  
+运行前先配置`tunnel_host = '127.0.0.1', tunnel_port = L_Port1, socks5_port = L_Port2`三个参数  
 
 6. 服务器（Linux）使用Internet
 - apt服务需要借助proxychains软件实现socks5代理：`sudo proxychains apt install <package-name>`
