@@ -15,7 +15,7 @@
 本地terminal执行：`ssh -L 127.0.0.1:8080:内部服务器:80 user@网关服务器`
 效果：将本地8080端口的流量通过SSH隧道转发到内网服务器的80端口
 
-2. 服务器运行[Tunnel_server.py]
+2. 服务器运行[Tunnel_server.py](./Tunnel_server.py)
 
 ### Test example
 `sudo proxychains apt download <package-name>`  
