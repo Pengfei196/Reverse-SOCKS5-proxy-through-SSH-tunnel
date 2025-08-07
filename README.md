@@ -3,6 +3,6 @@
 
 
 # Test example
-sudo proxychains apt download <package-name>
-pip install --proxy socks5h://127.0.0.1:9000 numpy
-curl -v  --proxy socks5h://127.0.0.1:9000 https://www.baidu.com
+`sudo proxychains apt download <package-name>`
+`pip install --proxy socks5h://127.0.0.1:9000 numpy`
+`curl -v  --proxy socks5h://127.0.0.1:9000 https://www.baidu.com`
