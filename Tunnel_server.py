@@ -1,3 +1,8 @@
+"""
+ Reverse-SOCKS5-proxy-through-SSH-tunnel
+ from https://github.com/Pengfei196/Reverse-SOCKS5-proxy-through-SSH-tunnel
+"""
+
 import socket
 import threading
 
