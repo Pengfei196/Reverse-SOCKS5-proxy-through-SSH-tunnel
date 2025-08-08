@@ -47,12 +47,9 @@ class PseudoSocks5Server:
                         print(f'Accepted connection from {addr}')
                         tunnel_sock_client.send(b'create a new socket')
                         response = tunnel_sock_client.recv(100)
-                        if response == b'socket created':
-                            tunnel_transfer_sock_client, client_addr = tunnel_sock.accept()
-                            threading.Thread(target=forward, args=(client_sock, tunnel_transfer_sock_client)).start()
-                            threading.Thread(target=forward, args=(tunnel_transfer_sock_client, client_sock)).start()
-                        else:
-                            client_sock.close()
+                        tunnel_transfer_sock_client, client_addr = tunnel_sock.accept()
+                        threading.Thread(target=forward, args=(client_sock, tunnel_transfer_sock_client)).start()
+                        threading.Thread(target=forward, args=(tunnel_transfer_sock_client, client_sock)).start()
                 except KeyboardInterrupt:
                     print('Shutting down...')
                     self.running = False
