@@ -33,6 +33,6 @@ pysoxy.py在客户端启动了一个轻量的socks5服务，运行前先配置`L
 - pip服务需要加上socks5代理命令：`pip install --proxy socks5h://127.0.0.1:R_Port2 <package-name>`  
   
 ### Test example
-`sudo proxychains apt install <package-name>`  
+`sudo proxychains apt update`  
 `pip install --proxy socks5h://127.0.0.1:9000 numpy`  
 `curl -v --proxy socks5h://127.0.0.1:9000 https://www.baidu.com`
