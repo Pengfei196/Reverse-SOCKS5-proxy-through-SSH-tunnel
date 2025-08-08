@@ -26,7 +26,6 @@ def main(tunnel_client_socket, tunnel_host, tunnel_port, socks5_port):
         try:
             command = tunnel_client_socket.recv(100)
             if command == b'create a new socket':
-                tunnel_client_socket.send(b'socket created')
                 new_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
                 new_socket.connect(('127.0.0.1', socks5_port))
                 transfer_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
@@ -44,3 +43,4 @@ if __name__ == '__main__':
     tunnel_client_socket = start_tcp_client(tunnel_host, tunnel_port)
 
     main(tunnel_client_socket, tunnel_host, tunnel_port, socks5_port)
+
