@@ -46,7 +46,6 @@ class PseudoSocks5Server:
                         client_sock, addr = server_sock.accept()
                         print(f'Accepted connection from {addr}')
                         tunnel_sock_client.send(b'create a new socket')
-                        response = tunnel_sock_client.recv(100)
                         tunnel_transfer_sock_client, client_addr = tunnel_sock.accept()
                         threading.Thread(target=forward, args=(client_sock, tunnel_transfer_sock_client)).start()
                         threading.Thread(target=forward, args=(tunnel_transfer_sock_client, client_sock)).start()
